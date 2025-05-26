@@ -14,7 +14,7 @@ RUN git config --global url."https://".insteadOf git://
 RUN cargo build --release
 
 FROM debian:bookworm
-RUN apt-get update && apt-get install -y libssl3 ca-certificates
+RUN apt-get update && apt-get install -y libssl3 ca-certificates curl
 COPY --from=builder /cartesi-coprocessor-solver/target/release/cartesi-coprocessor-solver /cartesi-coprocessor-solver/cartesi-coprocessor-solver
 COPY --from=builder /cartesi-coprocessor-solver/entrypoint.sh /entrypoint.sh
 
