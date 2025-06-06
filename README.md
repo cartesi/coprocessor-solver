@@ -35,8 +35,8 @@ A task processing and verification system that handles computational tasks on th
 2. **Processing**
    - Distributes tasks to operators
    - Collects operator responses
-   - Aggregates BLS signatures
-   - Verifies quorum thresholds using EigenLayer AVS information
+   - Aggregates BN254 signatures
+   - Verifies quorum thresholds using on-chain EigenLayer AVS information
 
 3. **Result Handling**
    - Verifies that output merkle root match the generated merkle roots of the outputs of the computation
